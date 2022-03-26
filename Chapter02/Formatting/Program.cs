@@ -44,6 +44,7 @@ namespace Formatting
                 arg0: bananasText,
                 arg1: bananasCount);
 
+            /*
             Write("Type your first name and press Enter: ");
             string firstName = ReadLine();
 
@@ -51,6 +52,16 @@ namespace Formatting
             string age = ReadLine();
 
             WriteLine($"Hello {firstName}, you look good for {age}.");
+            */
+
+            Write("Press any key combination: ");
+            ConsoleKeyInfo key = ReadKey();
+            WriteLine();
+            WriteLine("Key: {0}, Char: {1}, Modiflers: {2}",
+                arg0: key.Key,
+                arg1: key.KeyChar,
+                arg2: key.Modifiers);
+
         }
     }
 }
