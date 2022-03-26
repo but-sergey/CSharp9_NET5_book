@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Xml;
 
 namespace Variables
 {
@@ -20,12 +22,18 @@ namespace Variables
 
             int length = anotherName.Length;
 
-            int population = 66_000_000;
-            double weight = 1.88;
-            decimal price = 4.99M;
-            string fruit = "Apples";
-            char letter = 'Z';
-            bool happy = true;
+            var population = 66_000_000;
+            var weight = 1.88;
+            var price = 4.99M;
+            var fruit = "Apples";
+            var letter = 'Z';
+            var happy = true;
+
+            var xml1 = new XmlDocument();
+            XmlDocument xml2 = new XmlDocument();
+
+            var file1 = File.CreateText(@"D:\something.txt");
+            StreamWriter file2 = File.CreateText(@"D:\something.txt");
         }
     }
 }
