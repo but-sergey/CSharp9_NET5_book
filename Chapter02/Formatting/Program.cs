@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace Formatting
 {
@@ -9,7 +10,7 @@ namespace Formatting
             int numberOfApples = 12;
             decimal pricePerApple = 0.35M;
 
-            Console.WriteLine(
+            WriteLine(
                 format: "{0} apples costs {1:C}",
                 arg0: numberOfApples,
                 arg1: pricePerApple * numberOfApples);
@@ -19,37 +20,37 @@ namespace Formatting
                 arg0: numberOfApples,
                 arg1: pricePerApple * numberOfApples);
 
-            Console.WriteLine(formatted);
+            WriteLine(formatted);
 
-            Console.WriteLine($"{numberOfApples} apples costs {pricePerApple * numberOfApples:C}");
-
+            WriteLine($"{numberOfApples} apples costs {pricePerApple * numberOfApples:C}");
+            
             string applesText = "Apples";
             int applesCount = 1234;
             string bananasText = "Bananas";
             int bananasCount = 56789;
 
-            Console.WriteLine(
+            WriteLine(
                 format: "{0, -8} {1,6:N0}",
                 arg0: "Name",
                 arg1: "Count");
 
-            Console.WriteLine(
+            WriteLine(
                 format: "{0, -8} {1,6:N0}",
                 arg0: applesText,
                 arg1: applesCount);
 
-            Console.WriteLine(
+            WriteLine(
                 format: "{0, -8} {1,6:N0}",
                 arg0: bananasText,
                 arg1: bananasCount);
 
-            Console.Write("Type your first name and press Enter: ");
-            string firstName = Console.ReadLine();
+            Write("Type your first name and press Enter: ");
+            string firstName = ReadLine();
 
-            Console.Write("Type your age and press Enter: ");
-            string age = Console.ReadLine();
+            Write("Type your age and press Enter: ");
+            string age = ReadLine();
 
-            Console.WriteLine($"Hello {firstName}, you look good for {age}.");
+            WriteLine($"Hello {firstName}, you look good for {age}.");
         }
     }
 }
