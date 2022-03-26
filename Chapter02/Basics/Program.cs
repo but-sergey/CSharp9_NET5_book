@@ -1,5 +1,7 @@
 ﻿using System;
 
+//#error version
+
 namespace Basics
 {
     internal class Program
