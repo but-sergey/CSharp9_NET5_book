@@ -15,6 +15,10 @@ namespace Variables
             int length2 = ((string)name).Length;
 
             Console.WriteLine($"{name} has {length2} characters.");
+
+            dynamic anotherName = "Ahmed";
+
+            int length = anotherName.Length;
         }
     }
 }
