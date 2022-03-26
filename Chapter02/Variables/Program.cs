@@ -28,12 +28,19 @@ namespace Variables
             var fruit = "Apples";
             var letter = 'Z';
             var happy = true;
-
+            
+            /*
             var xml1 = new XmlDocument();
             XmlDocument xml2 = new XmlDocument();
 
             var file1 = File.CreateText(@"D:\something.txt");
             StreamWriter file2 = File.CreateText(@"D:\something.txt");
+            */
+
+            Console.WriteLine($"default(int) = {default(int)}");
+            Console.WriteLine($"default(bool) = {default(bool)}");
+            Console.WriteLine($"default(DateTime) = {default(DateTime)}");
+            Console.WriteLine($"default(string) = {default(string)}");
         }
     }
 }
