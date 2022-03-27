@@ -18,6 +18,10 @@ namespace BitwiseAndShiftOperators
             Console.WriteLine($"a << 3 = {a << 3}");
             Console.WriteLine($"a * 8 = {a * 8}");
             Console.WriteLine($"b >> 1 = {b >> 1}");
+
+            int age = 47;
+            char firstDigit = age.ToString()[0];
+            Console.WriteLine(firstDigit);
         }
     }
 }
