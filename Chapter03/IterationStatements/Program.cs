@@ -27,10 +27,18 @@ namespace IterationStatements
 
             Console.WriteLine("Correct!");
             */
-
+            /*
             for(int y = 1; y <= 10; y++)
             {
                 Console.WriteLine(y);
+            }
+            */
+
+            string[] names = { "Adam", "Barry", "Charlie" };
+
+            foreach(string name in names)
+            {
+                Console.WriteLine($"{name} has {name.Length} characters.");
             }
         }
     }
