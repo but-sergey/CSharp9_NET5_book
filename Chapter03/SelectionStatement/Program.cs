@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace SelectionStatement
 {
@@ -29,7 +30,7 @@ namespace SelectionStatement
                 Console.WriteLine("o is not an int so it cannot multiply!");
             }
             */
-
+            /*
             A_label:
             
             var number = (new Random()).Next(1, 7);
@@ -53,6 +54,53 @@ namespace SelectionStatement
                     Console.WriteLine("Default");
                     break;
             }
+            */
+
+            string path = @"D:\GitHub\CSharp9_NET5_book\Chapter03";
+
+            Console.Write("Press R for radonly or W for write: ");
+            ConsoleKeyInfo key = Console.ReadKey();
+            Console.WriteLine();
+
+            Stream s = null;
+
+            if(key.Key == ConsoleKey.R)
+            {
+                s = File.Open(
+                    Path.Combine(path, "file.txt"),
+                    FileMode.OpenOrCreate,
+                    FileAccess.Read);
+            }
+            else
+            {
+                s = File.Open(
+                    Path.Combine(path, "file.txt"),
+                    FileMode.OpenOrCreate,
+                    FileAccess.Write);
+            }
+
+            string message = string.Empty;
+
+            switch(s)
+            {
+                case FileStream writeableFile when s.CanWrite:
+                    message = "The stream is a file than I can write to.";
+                    break;
+                case FileStream readOnlyFile:
+                    message = "The stream is a read-only file.";
+                    break;
+                case MemoryStream ms:
+                    message = "The stream is a memory address.";
+                    break;
+                default:
+                    message = "The stream is some other type.";
+                    break;
+                case null:
+                    message = "The stream is null.";
+                    break;
+            }
+
+            Console.WriteLine(message);
         }
     }
 }
