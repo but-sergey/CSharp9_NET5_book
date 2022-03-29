@@ -15,7 +15,7 @@ namespace IterationStatements
                 x++;
             }
             */
-
+            /*
             string password = string.Empty;
 
             do
@@ -26,6 +26,12 @@ namespace IterationStatements
             while (password != "Pa$$w0rd");
 
             Console.WriteLine("Correct!");
+            */
+
+            for(int y = 1; y <= 10; y++)
+            {
+                Console.WriteLine(y);
+            }
         }
     }
 }
