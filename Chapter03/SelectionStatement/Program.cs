@@ -78,9 +78,9 @@ namespace SelectionStatement
                     FileMode.OpenOrCreate,
                     FileAccess.Write);
             }
-
+            
             string message = string.Empty;
-
+            /*
             switch(s)
             {
                 case FileStream writeableFile when s.CanWrite:
@@ -99,6 +99,21 @@ namespace SelectionStatement
                     message = "The stream is null.";
                     break;
             }
+            */
+
+            message = s switch
+            {
+                FileStream writeableFile when s.CanWrite
+                => "The stream is a file that I can write to.",
+                FileStream readOnlyFile
+                => "The stream is a read-only file.",
+                MemoryStream ms
+                => "The stream is a memory address.",
+                null
+                => "The stream is null.",
+                _
+                => "The stream is some orhter type."
+            };
 
             Console.WriteLine(message);
         }
