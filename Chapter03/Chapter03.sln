@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitwiseAndShiftOperators", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectionStatement", "SelectionStatement\SelectionStatement.csproj", "{715AB6FD-C577-4A8F-B89C-62AEA079741C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IterationStatements", "IterationStatements\IterationStatements.csproj", "{8E05B0AE-EA26-401B-8BAD-F60EC1739F5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{715AB6FD-C577-4A8F-B89C-62AEA079741C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{715AB6FD-C577-4A8F-B89C-62AEA079741C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{715AB6FD-C577-4A8F-B89C-62AEA079741C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E05B0AE-EA26-401B-8BAD-F60EC1739F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E05B0AE-EA26-401B-8BAD-F60EC1739F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E05B0AE-EA26-401B-8BAD-F60EC1739F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E05B0AE-EA26-401B-8BAD-F60EC1739F5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
