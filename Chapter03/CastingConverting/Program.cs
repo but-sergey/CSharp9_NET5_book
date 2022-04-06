@@ -28,11 +28,21 @@ namespace CastingConverting
             int h = Convert.ToInt32(g);
             Console.WriteLine($"g is {g} and h is {h}");
             */
-
+            
             double[] doubles = new[] { 9.49, 9.5, 9.51, 10.49, 10.5, 10.51 };
             foreach (double n in doubles)
             {
                 Console.WriteLine($"ToInt({n}) is {Convert.ToInt32(n)}");
+            }
+
+            foreach (double n in doubles)
+            {
+                Console.WriteLine(
+                    format: "Math.Round({0}, 0, MidpointRounding.AwayFromZero) is {1}",
+                    arg0: n,
+                    arg1: Math.Round(value: n,
+                        digits: 0,
+                        mode: MidpointRounding.AwayFromZero));
             }
         }
     }
