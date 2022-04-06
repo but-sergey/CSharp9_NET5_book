@@ -28,7 +28,7 @@ namespace CastingConverting
             int h = Convert.ToInt32(g);
             Console.WriteLine($"g is {g} and h is {h}");
             */
-            
+            /*
             double[] doubles = new[] { 9.49, 9.5, 9.51, 10.49, 10.5, 10.51 };
             foreach (double n in doubles)
             {
@@ -44,6 +44,19 @@ namespace CastingConverting
                         digits: 0,
                         mode: MidpointRounding.AwayFromZero));
             }
+            */
+
+            int number = 12;
+            Console.WriteLine(number.ToString());
+
+            bool boolean = true;
+            Console.WriteLine(boolean.ToString());
+
+            DateTime now = DateTime.Now;
+            Console.WriteLine(now.ToString());
+
+            object me = new object();
+            Console.WriteLine(me.ToString());
         }
     }
 }
