@@ -45,7 +45,7 @@ namespace CastingConverting
                         mode: MidpointRounding.AwayFromZero));
             }
             */
-
+            /*
             int number = 12;
             Console.WriteLine(number.ToString());
 
@@ -57,6 +57,22 @@ namespace CastingConverting
 
             object me = new object();
             Console.WriteLine(me.ToString());
+            */
+
+            byte[] binaryObject = new byte[128];
+
+            (new Random()).NextBytes(binaryObject);
+
+            Console.WriteLine("Binary Object as bytes:");
+
+            for(int index = 0; index < binaryObject.Length; index++)
+            {
+                Console.Write($"{binaryObject[index]:X} ");
+            }
+            Console.WriteLine();
+
+            string encoded = Convert.ToBase64String(binaryObject);
+            Console.WriteLine($"Binary Object as Base64: {encoded}");
         }
     }
 }
