@@ -6,6 +6,7 @@ namespace CheckingForOverflow
     {
         static void Main(string[] args)
         {
+            /*
             try
             {
                 checked
@@ -24,6 +25,9 @@ namespace CheckingForOverflow
             {
                 Console.WriteLine("The code overflowed but I caught the exception.");
             }
+            */
+
+            int y = int.MaxValue + 1;
         }
     }
 }
