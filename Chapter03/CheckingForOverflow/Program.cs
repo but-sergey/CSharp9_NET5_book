@@ -6,7 +6,14 @@ namespace CheckingForOverflow
     {
         static void Main(string[] args)
         {
-            
+            int x = int.MaxValue - 1;
+            Console.WriteLine($"Initial value: {x}");
+            x++;
+            Console.WriteLine($"After incrementing: {x}");
+            x++;
+            Console.WriteLine($"After incrementing: {x}");
+            x++;
+            Console.WriteLine($"After incrementing: {x}");
         }
     }
 }
