@@ -27,7 +27,16 @@ namespace CheckingForOverflow
             }
             */
 
-            int y = int.MaxValue + 1;
+            unchecked
+            {
+                int y = int.MaxValue + 1;
+
+                Console.WriteLine($"Initial value: {y}");
+                y--;
+                Console.WriteLine($"After decrementing: {y}");
+                y--;
+                Console.WriteLine($"After decrementing: {y}");
+            }
         }
     }
 }
